@@ -68,4 +68,4 @@ class Config{
 }
 const config = new Config(500);
 
-client.login("NzE4NDkyNzI3OTE4MDY3NzEy.XtpqhA.Mj2F1iydobPrkbpgW1dVz34xq_o");
+client.login("");
