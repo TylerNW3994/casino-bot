@@ -33,6 +33,15 @@ client.on('message', msg => {
 		}
 		if(command == "getchips")
 			msg.reply(" " + Config.getChips(config));
+		if(command == "adminhelp"){
+			const EMBED = new MessageEmbed()
+				.setTitle("Administrator Commands for Casino Bot")
+				.setColor(0xff9999)
+				.setDescription("!csnChangeChips - Allows you to change the number of chips a player starts with anywhere from 1 to 1,000,000.\n" +
+								"!csnGetChips - Allows you to see how many chips each player starts with.")
+			msg.channel.send(EMBED);
+		}
+		return false;
 	}
 	
 	//User is accessing this bot's commands
@@ -41,7 +50,14 @@ client.on('message', msg => {
 			.setTitle("CasinoBot Help!")
 			.setColor(0x0000ff)
 			.setDescription("Hey there " +  author + "!  I'm the CasinoBot! \n " +
-							"Potato");
+							"Here in the Discino, we promote family friendly fun!\n" +
+							"Make sure you follow the rules set by your server administrators!\n\n" +
+							"If you are an administrator on the server, you can type !csnAdminHelp to see the list of commands available for you to use!\n" +
+							"We currently allow you to bet your chips in a game of slots, blackjack, and poker!  You can only play poker if you have at least one other person " +
+							"with you!\n\n" +
+							"Type !csnLeaderboard to see who has the most chips!\n\n" +
+							"To play any of our games, type !csn followed by the game you want to play!\n" +
+							"So if you want to play Slots, type !csnSlots");
 		msg.channel.send(EMBED);
 	}
 });
