@@ -38,9 +38,10 @@ client.on('message', msg => {
 	//User is accessing this bot's commands
 	if(command == "help"){
 		const EMBED = new MessageEmbed()
-			.setTitle("TestTitle")
+			.setTitle("CasinoBot Help!")
 			.setColor(0x0000ff)
-			.setDescription("TestDescription");
+			.setDescription("Hey there " +  author + "!  I'm the CasinoBot! \n " +
+							"Potato");
 		msg.channel.send(EMBED);
 	}
 });
@@ -68,4 +69,4 @@ class Config{
 }
 const config = new Config(500);
 
-client.login("");
+client.login("NzE4NDkyNzI3OTE4MDY3NzEy.Xt1srQ.M14pzr_sX1TQ8QgTfmgfF-5FJhU");
